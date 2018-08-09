@@ -14,7 +14,7 @@
     "node": ">8.0.0"
   },
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "types": "typings/xterm-ligature-support.d.ts",
   "scripts": {
     "prepare": "node bin/download-fonts.js",
     "lint": "tslint --project tsconfig.json --fix",
@@ -22,7 +22,7 @@
     "build": "tsc",
     "watch": "tsc -w",
     "pretest": "npm run build",
-    "test": "nyc mocha lib/**/*.test.js"
+    "test": "nyc mocha lib/**/*.{test,integration}.js"
   },
   "keywords": [
     "font",
