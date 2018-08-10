@@ -1,5 +1,7 @@
 # xterm-ligature-support
 
+[![Build status](https://xtermjs.visualstudio.com/xterm-addon-ligatures/_apis/build/status/xterm-addon-ligatures-CI)](https://xtermjs.visualstudio.com/xterm-addon-ligatures/_build/latest?definitionId=2)
+
 Add support for programming ligatures to [xterm.js][] when running in
 environments with access to [Node.js][] APIs (such as [Electron][]).
 
