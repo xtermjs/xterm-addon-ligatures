@@ -1,6 +1,7 @@
 # xterm-addon-ligatures
 
 [![Build status](https://xtermjs.visualstudio.com/xterm-addon-ligatures/_apis/build/status/xterm-addon-ligatures-CI)](https://xtermjs.visualstudio.com/xterm-addon-ligatures/_build/latest?definitionId=2)
+[![Coverage Status](https://coveralls.io/repos/github/xtermjs/xterm-addon-ligatures/badge.svg?branch=master)](https://coveralls.io/github/xtermjs/xterm-addon-ligatures?branch=master)
 
 Add support for programming ligatures to [xterm.js][] when running in
 environments with access to [Node.js][] APIs (such as [Electron][]).
