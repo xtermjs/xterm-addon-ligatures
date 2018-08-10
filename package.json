@@ -68,6 +68,7 @@
     ],
     "exclude": [
       "lib/**/*.test.*",
+      "lib/**/*.integration.*",
       "lib/**/*.d.ts",
       "lib/**/*.map*"
     ]
