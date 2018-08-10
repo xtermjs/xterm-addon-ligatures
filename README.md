@@ -1,4 +1,4 @@
-# xterm-ligature-support
+# xterm-addon-ligatures
 
 [![Build status](https://xtermjs.visualstudio.com/xterm-addon-ligatures/_apis/build/status/xterm-addon-ligatures-CI)](https://xtermjs.visualstudio.com/xterm-addon-ligatures/_build/latest?definitionId=2)
 
@@ -15,7 +15,7 @@ environments with access to [Node.js][] APIs (such as [Electron][]).
 Install in your project by running:
 
 ```
-npm install xterm-ligature-support
+npm install xterm-addon-ligatures
 ```
 
 Then, modify the location where you initialize the terminal to enable ligature
@@ -26,7 +26,7 @@ Your code should look something like this:
 
 ```js
 import { Terminal } from 'xterm';
-import * as ligatures from 'xterm-ligature-support';
+import * as ligatures from 'xterm-addon-ligatures';
 
 Terminal.applyAddon(ligatures);
 
@@ -50,7 +50,7 @@ terminal as an argument:
 
 ```js
 import { Terminal } from 'xterm';
-import { enableLigatures } from 'xterm-ligature-support';
+import { enableLigatures } from 'xterm-addon-ligatures';
 
 const terminal = new Terminal();
 terminal.open(document.getElementById('terminal-mount'));

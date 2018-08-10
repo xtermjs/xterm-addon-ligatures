@@ -1,4 +1,4 @@
-# How to contribute to xterm-ligature-support
+# How to contribute to xterm-addon-ligatures
 
 - [Opening issues for bug reports or feature requests](#opening-issues)
 - [Contributing code](#contributing-code)
@@ -6,7 +6,7 @@
 ## Opening issues
 
 The preferred way to report bugs or request features is to use
-[GitHub issues](http://github.com/xtermjs/xterm-ligature-support/issues). Before
+[GitHub issues](http://github.com/xtermjs/xterm-addon-ligatures/issues). Before
 opening an issue, read these pointers.
 
 ### Opening issues effectively
@@ -16,7 +16,7 @@ opening an issue, read these pointers.
   mention this fact in the bug report. Also include browser version numbers and
   the operating system that you're on.
 
-- Mention which release of xterm.js and xterm-ligature-support you're using.
+- Mention which release of xterm.js and xterm-addon-ligatures you're using.
   Preferably, try also with the current HEAD of the master branch, to ensure the
   problem has not already been fixed.
 
@@ -30,7 +30,7 @@ opening an issue, read these pointers.
 ## Contributing code
 
 - Make sure you have a [GitHub account](https://github.com/join)
-- Fork [xterm-ligature-support](https://github.com/xtermjs/xterm-ligature-support/)
+- Fork [xterm-addon-ligatures](https://github.com/xtermjs/xterm-addon-ligatures/)
   ([how to fork a repo](https://help.github.com/articles/fork-a-repo))
 - Make your changes
 - If your changes are easy to test or likely to regress, add tests. Tests go into corresponding `.test.ts` files.
@@ -39,9 +39,9 @@ opening an issue, read these pointers.
 ([how to create a pull request](https://help.github.com/articles/fork-a-repo)).
   Don't put more than one feature/fix in a single pull request.
 
-By contributing code to xterm-ligature-support you
+By contributing code to xterm-addon-ligatures you
 
- - agree to license the contributed code under xterm-ligature-support's [MIT
+ - agree to license the contributed code under xterm-addon-ligatures's [MIT
    license](LICENSE).
 
  - confirm that you have the right to contribute and license the code
