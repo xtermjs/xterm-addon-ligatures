@@ -1,7 +1,7 @@
-/// <reference path="../../typings/xterm-ligature-support.d.ts" />
+/// <reference path="../../typings/xterm-addon-ligatures.d.ts" />
 
 import { Terminal } from 'xterm';
-import * as ligatures from 'xterm-ligature-support';
+import * as ligatures from 'xterm-addon-ligatures';
 
 Terminal.applyAddon(ligatures);
 ligatures.apply(Terminal);

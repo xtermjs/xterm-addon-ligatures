@@ -6,7 +6,7 @@ import * as fontLigatures from 'font-ligatures';
 
 import * as ligatureSupport from '.';
 
-describe('xterm-ligature-support', () => {
+describe('xterm-addon-ligatures', () => {
   let onRefresh: sinon.SinonStub;
   let term: MockTerminal;
 

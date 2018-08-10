@@ -10,7 +10,7 @@ about: Create a bug report
 - Browser and browser and/or electron version: 
 - OS version: 
 - xterm.js version: 
-- xterm-ligature-support version: 
+- xterm-addon-ligatures version: 
 
 ### Steps to reproduce
 
