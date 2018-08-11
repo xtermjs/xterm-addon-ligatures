@@ -50,11 +50,11 @@
     "tslint": "^5.9.1",
     "tslint-consistent-codestyle": "^1.13.0",
     "typescript": "^2.8.3",
-    "xterm": "^3.5.0",
+    "xterm": "^3.6.0",
     "yauzl": "^2.10.0"
   },
   "peerDependencies": {
-    "xterm": "^3.5.0"
+    "xterm": "^3.6.0"
   },
   "nyc": {
     "sourceMap": true,
