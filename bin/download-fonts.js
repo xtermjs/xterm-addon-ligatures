@@ -17,32 +17,49 @@ const fontsFolder = path.join(__dirname, '../fonts');
 async function download() {
   await mkdirp(fontsFolder);
 
-  console.log('Downloading Fira Code...');
-  await writeFile(
-    path.join(fontsFolder, 'firaCode.otf'),
-    (await axios.get(urls.fira, { responseType: 'arraybuffer' })).data
-  );
-
-  console.log('Downloading Iosevka...');
-  const iosevkaContents = (await axios.get(urls.iosevka, { responseType: 'arraybuffer' })).data;
-  const iosevkaZipfile = await util.promisify(yauzl.fromBuffer)(iosevkaContents);
-  await new Promise((resolve, reject) => {
-    iosevkaZipfile.on('entry', entry => {
-      if (entry.fileName === 'ttf/iosevka-regular.ttf') {
-        iosevkaZipfile.openReadStream(entry, (err, stream) => {
-          if (err) {
-            return reject(err);
-          }
-
-          const writeStream = fs.createWriteStream(path.join(fontsFolder, 'iosevka.ttf'));
-          stream.pipe(writeStream);
-          writeStream.on('close', () => resolve());
-        });
-      }
-    });
-  });
+  await downloadFiraCode();
+  await downloadIosevka();
 
   console.log('Loaded all fonts for testing')
+}
+
+async function downloadFiraCode() {
+  const file = path.join(fontsFolder, 'firaCode.otf');
+  if (await util.promisify(fs.exists)(file)) {
+    console.log('Fira Code already loaded');
+  } else {
+    console.log('Downloading Fira Code...');
+    await writeFile(
+      file,
+      (await axios.get(urls.fira, { responseType: 'arraybuffer' })).data
+    );
+  }
+}
+
+async function downloadIosevka() {
+  const file = path.join(fontsFolder, 'iosevka.ttf');
+  if (await util.promisify(fs.exists)(file)) {
+    console.log('Iosevka already loaded');
+  } else {
+    console.log('Downloading Iosevka...');
+    const iosevkaContents = (await axios.get(urls.iosevka, { responseType: 'arraybuffer' })).data;
+    const iosevkaZipfile = await util.promisify(yauzl.fromBuffer)(iosevkaContents);
+    await new Promise((resolve, reject) => {
+      iosevkaZipfile.on('entry', entry => {
+        if (entry.fileName === 'ttf/iosevka-regular.ttf') {
+          iosevkaZipfile.openReadStream(entry, (err, stream) => {
+            if (err) {
+              return reject(err);
+            }
+
+            const writeStream = fs.createWriteStream(file);
+            stream.pipe(writeStream);
+            writeStream.on('close', () => resolve());
+          });
+        }
+      });
+    });
+  }
 }
 
 download();
