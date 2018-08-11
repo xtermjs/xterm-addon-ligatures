@@ -27,8 +27,7 @@ export function enableLigatures(term: Terminal): void {
   let loadingState: LoadingState = LoadingState.UNLOADED;
   let loadError: any | undefined = undefined;
 
-  // TODO: remove any once 3.6.0 is published
-  (term as any).registerCharacterJoiner((text: string): [number, number][] => {
+  term.registerCharacterJoiner((text: string): [number, number][] => {
     // If the font hasn't been loaded yet, load it and return an empty result
     const termFont = term.getOption('fontFamily');
     if (
