@@ -23,7 +23,7 @@ jobs:
       yarn build
     displayName: 'Build'
   - script: |
-      yarn mocha
+      yarn test
     displayName: 'Test'
   - script: |
       yarn lint
@@ -44,7 +44,7 @@ jobs:
       yarn build
     displayName: 'Build'
   - script: |
-      yarn mocha
+      yarn test
     displayName: 'Test'
   - script: |
       yarn lint
@@ -65,7 +65,7 @@ jobs:
       yarn build
     displayName: 'Build'
   - script: |
-      yarn mocha
+      yarn test
     displayName: 'Test'
   - script: |
       yarn lint
