@@ -23,7 +23,8 @@
     "watch": "tsc -w",
     "pretest": "npm run build",
     "test": "nyc mocha lib/**/*.{test,integration}.js",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepublish": "npm run build"
   },
   "keywords": [
     "font",
