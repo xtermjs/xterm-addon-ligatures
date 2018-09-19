@@ -22,7 +22,8 @@
     "build": "tsc",
     "watch": "tsc -w",
     "pretest": "npm run build",
-    "test": "nyc mocha lib/**/*.{test,integration}.js"
+    "test": "nyc mocha lib/**/*.{test,integration}.js",
+    "prepublish": "npm run build"
   },
   "keywords": [
     "font",
