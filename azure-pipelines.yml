@@ -28,6 +28,10 @@ jobs:
   - script: |
       yarn lint
     displayName: 'Lint'
+  - script: |
+      export COVERALLS_GIT_BRANCH=$BUILD_SOURCEBRANCH
+      yarn coveralls
+    displayName: 'Publish coverage'
 
 - job: macOS
   pool:
