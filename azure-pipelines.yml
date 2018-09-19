@@ -29,7 +29,11 @@ jobs:
       yarn lint
     displayName: 'Lint'
   - script: |
-      export COVERALLS_GIT_BRANCH=$BUILD_SOURCEBRANCH
+      if [ "$BUILD_SOURCEBRANCH" = "refs/heads/master" ]; then
+        export COVERALLS_GIT_BRANCH=master
+      else
+        export COVERALLS_GIT_BRANCH=$BUILD_SOURCEBRANCH
+      fi
       yarn coveralls
     displayName: 'Publish coverage'
 
