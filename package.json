@@ -13,7 +13,7 @@
   "engines": {
     "node": ">8.0.0"
   },
-  "main": "lib/index.js",
+  "main": "lib/LigaturesAddon.js",
   "types": "typings/xterm-addon-ligatures.d.ts",
   "scripts": {
     "prepare": "node bin/download-fonts.js",
@@ -22,7 +22,7 @@
     "build": "tsc",
     "watch": "tsc -w",
     "pretest": "npm run build",
-    "test": "nyc mocha lib/**/*.{test,integration}.js",
+    "test": "nyc mocha lib/**/*.test.js",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "prepublish": "npm run build"
   },
