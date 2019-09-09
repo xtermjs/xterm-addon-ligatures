@@ -8,7 +8,7 @@ environments with access to [Node.js][] APIs (such as [Electron][]).
 ## Requirements
 
  * [Node.js][] 8.x or higher (present in [Electron][] 1.8.3 or higher)
- * [xterm.js][] 3.6.0 or higher using the default canvas renderer
+ * [xterm.js][] 4.0.0 or higher using the default canvas renderer
 
 ## Usage
 
