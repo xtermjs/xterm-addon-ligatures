@@ -1,6 +1,6 @@
 {
   "name": "xterm-addon-ligatures",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "Add support for programming ligatures to xterm.js",
   "homepage": "https://github.com/xtermjs/xterm-addon-ligatures#readme",
   "repository": {
